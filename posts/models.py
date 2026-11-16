@@ -24,3 +24,15 @@ class Comment(models.Model):
 
     def __str__(self):
         return f'"{self.text}" - {self.author.username}'
+
+
+class Category(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.TextField()
+    posts = models.ManyToManyField(Post, related_name='categories', blank=True)
+
+    class Meta:
+        verbose_name_plural = 'categories'
+
+    def __str__(self):
+        return self.name
