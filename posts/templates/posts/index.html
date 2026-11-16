@@ -13,14 +13,21 @@
     <a class="botao" href="{% url 'posts:create' %}">Publicar notícia</a>
 </div>
 {% if post_list %}
-<ul class="lista-posts">
+<div class="grade-noticias">
     {% for post in post_list %}
-    <li>
-        <a href="{% url 'posts:detail' post.id %}">{{ post.title }}</a>
-        <small>{{ post.pub_date|date:"d/m/Y H:i" }}</small>
-    </li>
+    <a class="cartao" href="{% url 'posts:detail' post.id %}">
+        {% if post.image_url %}
+        <img src="{{ post.image_url }}" alt="{{ post.title }}">
+        {% else %}
+        <div class="sem-imagem">Otaku News</div>
+        {% endif %}
+        <div class="cartao-texto">
+            <h2>{{ post.title }}</h2>
+            <small>{{ post.pub_date|date:"d/m/Y H:i" }}</small>
+        </div>
+    </a>
     {% endfor %}
-</ul>
+</div>
 {% else %}
 <p>Nenhuma notícia publicada{% if category %} nesta categoria{% endif %}.</p>
 {% endif %}
