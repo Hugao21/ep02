@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Comentar{% endblock title %}
+
+{% block content %}
+<h1>Comentar em "{{ post.title }}"</h1>
+<form action="{% url 'posts:comment' post.id %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input class="botao" type="submit" value="Enviar comentário">
+</form>
+<a href="{% url 'posts:detail' post.id %}">Voltar para a notícia</a>
+{% endblock content %}

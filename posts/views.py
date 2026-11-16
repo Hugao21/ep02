@@ -1,7 +1,9 @@
+from django.http import HttpResponseRedirect
+from django.shortcuts import get_object_or_404, render
 from django.urls import reverse, reverse_lazy
 from django.views import generic
 
-from .forms import PostForm
+from .forms import CommentForm, PostForm
 from .models import Post
 
 
@@ -38,3 +40,19 @@ class PostDeleteView(generic.DeleteView):
     model = Post
     template_name = 'posts/delete.html'
     success_url = reverse_lazy('posts:index')
+
+
+def create_comment(request, post_id):
+    post = get_object_or_404(Post, pk=post_id)
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.post = post
+            comment.save()
+            return HttpResponseRedirect(
+                reverse('posts:detail', args=(post_id, )))
+    else:
+        form = CommentForm()
+    context = {'form': form, 'post': post}
+    return render(request, 'posts/comment.html', context)
