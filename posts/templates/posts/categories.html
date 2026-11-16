@@ -4,6 +4,9 @@
 
 {% block content %}
 <h1>Categorias</h1>
+<div class="acoes">
+    <a class="botao" href="{% url 'posts:category_create' %}">Nova categoria</a>
+</div>
 {% if category_list %}
 <ul class="lista-posts">
     {% for category in category_list %}
