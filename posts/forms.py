@@ -9,10 +9,12 @@ class PostForm(ModelForm):
         model = Post
         fields = [
             'title',
+            'image_url',
             'content',
         ]
         labels = {
             'title': 'Título',
+            'image_url': 'URL da imagem de capa',
             'content': 'Conteúdo (HTML)',
         }
 

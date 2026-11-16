@@ -11,6 +11,9 @@
         <a href="{% url 'posts:category' category.id %}">{{ category.name }}</a>
         {% endfor %}
     </p>
+    {% if post.image_url %}
+    <img class="capa" src="{{ post.image_url }}" alt="{{ post.title }}">
+    {% endif %}
     <div class="conteudo">
         {{ post.content|safe }}
     </div>
