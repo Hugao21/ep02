@@ -1,0 +1,212 @@
+[
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$1500000$mUboLclRiP6DIMYYvnKH9v$5HU7YTnUhWSXwO25lb52my5u6Tgfl4+dv5vmDjgo/Y0=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "sakura",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-11-16T12:38:10.872Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$1500000$st4Ar4ILxuvLBzrUbdN8dN$jiVeJdqkhXH8ANmbePPHqkHaC1L2QzRCS4LP/391nDY=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "kenji",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-11-16T12:38:11.967Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$1500000$dgcUOW4Xww4dJUiBkGCg6U$M55Dasg1mqxSqYl+/aNfCxTmh1Gj2ZzOXlqu8zloZyQ=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "yuki",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-11-16T12:38:12.889Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 1,
+    "fields": {
+      "title": "Temporada de inverno 2027: os animes mais aguardados",
+      "content": "<p>A temporada de <strong>inverno de 2027</strong> promete ser uma das mais movimentadas dos últimos anos, com continuações de franquias populares e várias estreias originais.</p><h3>Destaques</h3><ul><li>Continuações de séries de ação consagradas;</li><li>Novas comédias românticas baseadas em light novels;</li><li>Produções originais de estúdios independentes.</li></ul><p>Fique ligado no <em>Otaku News</em> para acompanhar os trailers e as datas de estreia.</p>",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Anime_billboards_in_Akihabara_2012-09-18.jpg/960px-Anime_billboards_in_Akihabara_2012-09-18.jpg",
+      "pub_date": "2026-11-10T12:30:00Z"
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 2,
+    "fields": {
+      "title": "Mangá de fantasia sombria ganha adaptação para anime",
+      "content": "<p>Foi anunciada hoje a adaptação para anime de um dos mangás de <strong>fantasia sombria</strong> mais vendidos do ano.</p><p>A produção ficará a cargo de um estúdio conhecido por suas cenas de ação bem animadas, e a estreia está prevista para 2027.</p><blockquote>\"Queremos respeitar ao máximo a atmosfera do mangá original\", afirmou o diretor.</blockquote>",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/008_Anime_and_manga_bookshop_in_Japan_-_bookstore_in_Kyoto%2C_Japan.jpg/960px-008_Anime_and_manga_bookshop_in_Japan_-_bookstore_in_Kyoto%2C_Japan.jpg",
+      "pub_date": "2026-11-12T17:00:00Z"
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 3,
+    "fields": {
+      "title": "Festival de cultura japonesa em São Paulo divulga programação",
+      "content": "<p>O tradicional festival de cultura pop japonesa de São Paulo divulgou sua programação completa.</p><p>O evento contará com <strong>concurso de cosplay</strong>, apresentações de J-Pop, sessões de autógrafos com dubladores e uma área dedicada a jogos.</p><p>Os ingressos já estão à venda no site oficial do evento.</p>",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Universal_Cosplay_Convention_2016.jpg/960px-Universal_Cosplay_Convention_2016.jpg",
+      "pub_date": "2026-11-14T21:45:00Z"
+    }
+  },
+  {
+    "model": "posts.post",
+    "pk": 4,
+    "fields": {
+      "title": "Estúdio confirma segunda temporada de anime de ação",
+      "content": "<p>Depois do sucesso da primeira temporada, o estúdio responsável confirmou que a <strong>segunda temporada</strong> do anime já está em produção.</p><p>Um teaser foi exibido ao final do último episódio, mostrando o retorno do protagonista e de novos rivais.</p>",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Akihabara_Night.jpg/960px-Akihabara_Night.jpg",
+      "pub_date": "2026-11-15T14:20:00Z"
+    }
+  },
+  {
+    "model": "posts.comment",
+    "pk": 1,
+    "fields": {
+      "author": 2,
+      "text": "Ansiosa demais pelas continuações! Inverno vai ser épico.",
+      "date": "2026-11-10T13:05:00Z",
+      "post": 1
+    }
+  },
+  {
+    "model": "posts.comment",
+    "pk": 2,
+    "fields": {
+      "author": 3,
+      "text": "Espero que as estreias originais surpreendam também.",
+      "date": "2026-11-10T15:40:00Z",
+      "post": 1
+    }
+  },
+  {
+    "model": "posts.comment",
+    "pk": 3,
+    "fields": {
+      "author": 4,
+      "text": "Já montei minha lista para assistir, obrigado pela matéria!",
+      "date": "2026-11-11T11:15:00Z",
+      "post": 1
+    }
+  },
+  {
+    "model": "posts.comment",
+    "pk": 4,
+    "fields": {
+      "author": 3,
+      "text": "Finalmente! Esse mangá merecia uma adaptação há tempos.",
+      "date": "2026-11-12T18:10:00Z",
+      "post": 2
+    }
+  },
+  {
+    "model": "posts.comment",
+    "pk": 5,
+    "fields": {
+      "author": 2,
+      "text": "Torcendo para manterem a trilha sonora no clima sombrio.",
+      "date": "2026-11-13T12:00:00Z",
+      "post": 2
+    }
+  },
+  {
+    "model": "posts.comment",
+    "pk": 6,
+    "fields": {
+      "author": 4,
+      "text": "Aquele teaser no final foi incrível!",
+      "date": "2026-11-15T15:00:00Z",
+      "post": 4
+    }
+  },
+  {
+    "model": "posts.comment",
+    "pk": 7,
+    "fields": {
+      "author": 3,
+      "text": "A primeira temporada foi perfeita, a expectativa está alta.",
+      "date": "2026-11-15T22:30:00Z",
+      "post": 4
+    }
+  },
+  {
+    "model": "posts.category",
+    "pk": 1,
+    "fields": {
+      "name": "Lançamentos",
+      "description": "Anúncios de novos animes, filmes e adaptações.",
+      "posts": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "posts.category",
+    "pk": 2,
+    "fields": {
+      "name": "Temporadas",
+      "description": "Guias de temporada e novas temporadas de séries.",
+      "posts": [
+        1,
+        4
+      ]
+    }
+  },
+  {
+    "model": "posts.category",
+    "pk": 3,
+    "fields": {
+      "name": "Mangás",
+      "description": "Novidades do mundo dos mangás e suas adaptações.",
+      "posts": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "posts.category",
+    "pk": 4,
+    "fields": {
+      "name": "Eventos",
+      "description": "Convenções, festivais e encontros de fãs.",
+      "posts": [
+        3
+      ]
+    }
+  }
+]
