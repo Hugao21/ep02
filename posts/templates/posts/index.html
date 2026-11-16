@@ -4,11 +4,14 @@
 
 {% block content %}
 <h1>Posts</h1>
+<div class="acoes">
+    <a class="botao" href="{% url 'posts:create' %}">Novo post</a>
+</div>
 {% if post_list %}
 <ul class="lista-posts">
     {% for post in post_list %}
     <li>
-        {{ post.title }}
+        <a href="{% url 'posts:detail' post.id %}">{{ post.title }}</a>
         <small>{{ post.pub_date|date:"d/m/Y H:i" }}</small>
     </li>
     {% endfor %}

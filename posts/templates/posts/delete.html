@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Remover post{% endblock title %}
+
+{% block content %}
+<h1>Remover post</h1>
+<p>Tem certeza que deseja remover o post "{{ post.title }}"?</p>
+<form action="{% url 'posts:delete' post.id %}" method="post">
+    {% csrf_token %}
+    <div class="acoes">
+        <input class="botao perigo" type="submit" value="Confirmar remoção">
+        <a href="{% url 'posts:detail' post.id %}">Cancelar</a>
+    </div>
+</form>
+{% endblock content %}

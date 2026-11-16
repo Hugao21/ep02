@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Editar post{% endblock title %}
+
+{% block content %}
+<h1>Editar post</h1>
+<form action="{% url 'posts:update' post.id %}" method="post">
+    {% csrf_token %}
+    <p>
+        <label for="title">Título</label>
+        <input type="text" name="title" id="title" value="{{ post.title }}">
+    </p>
+    <p>
+        <label for="content">Conteúdo (HTML)</label>
+        <textarea name="content" id="content">{{ post.content }}</textarea>
+    </p>
+    <input class="botao" type="submit" value="Salvar">
+</form>
+<a href="{% url 'posts:detail' post.id %}">Voltar para o post</a>
+{% endblock content %}
