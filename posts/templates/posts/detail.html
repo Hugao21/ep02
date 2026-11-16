@@ -15,4 +15,16 @@
     <a class="botao perigo" href="{% url 'posts:delete' post.id %}">Remover</a>
     <a href="{% url 'posts:index' %}">Voltar para as notícias</a>
 </div>
+<section class="comentarios">
+    <h2>Comentários</h2>
+    <a class="botao" href="{% url 'posts:comment' post.id %}">Comentar</a>
+    {% for comment in post.comment_set.all %}
+    <div class="comentario">
+        <p class="meta"><strong>{{ comment.author.username }}</strong> em {{ comment.date|date:"d/m/Y H:i" }}</p>
+        <p>{{ comment.text }}</p>
+    </div>
+    {% empty %}
+    <p>Seja o primeiro a comentar esta notícia!</p>
+    {% endfor %}
+</section>
 {% endblock content %}
