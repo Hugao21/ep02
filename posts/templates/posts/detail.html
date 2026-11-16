@@ -13,6 +13,6 @@
 <div class="acoes">
     <a class="botao" href="{% url 'posts:update' post.id %}">Editar</a>
     <a class="botao perigo" href="{% url 'posts:delete' post.id %}">Remover</a>
-    <a href="{% url 'posts:index' %}">Voltar para a lista</a>
+    <a href="{% url 'posts:index' %}">Voltar para as notícias</a>
 </div>
 {% endblock content %}

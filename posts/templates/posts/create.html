@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 
-{% block title %}Novo post{% endblock title %}
+{% block title %}Nova notícia{% endblock title %}
 
 {% block content %}
-<h1>Novo post</h1>
+<h1>Nova notícia</h1>
 <form action="{% url 'posts:create' %}" method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <input class="botao" type="submit" value="Criar post">
+    <input class="botao" type="submit" value="Publicar">
 </form>
-<a href="{% url 'posts:index' %}">Voltar para a lista</a>
+<a href="{% url 'posts:index' %}">Voltar para as notícias</a>
 {% endblock content %}

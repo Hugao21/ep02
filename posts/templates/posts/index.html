@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 
-{% block title %}Posts{% endblock title %}
+{% block title %}Últimas notícias{% endblock title %}
 
 {% block content %}
-<h1>Posts</h1>
+<h1>Últimas notícias</h1>
 <div class="acoes">
-    <a class="botao" href="{% url 'posts:create' %}">Novo post</a>
+    <a class="botao" href="{% url 'posts:create' %}">Publicar notícia</a>
 </div>
 {% if post_list %}
 <ul class="lista-posts">
@@ -17,6 +17,6 @@
     {% endfor %}
 </ul>
 {% else %}
-<p>Nenhum post encontrado.</p>
+<p>Nenhuma notícia publicada.</p>
 {% endif %}
 {% endblock content %}

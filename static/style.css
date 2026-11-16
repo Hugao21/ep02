@@ -4,28 +4,41 @@
 
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f4f5f7;
-    color: #222;
-    line-height: 1.5;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    background: #0f0f1a;
+    color: #e8e8f0;
+    line-height: 1.6;
+}
+
+a {
+    color: #ff4f8b;
 }
 
 #cabecalho-principal {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
     padding: 1rem 2rem;
-    background: #1f3a5f;
+    background: linear-gradient(90deg, #2b1055, #7597de);
+    border-bottom: 4px solid #ff4f8b;
 }
 
 #cabecalho-principal a {
     color: #fff;
     text-decoration: none;
+    font-weight: 600;
 }
 
 .logo {
-    font-size: 1.4rem;
-    font-weight: bold;
+    font-size: 1.6rem;
+    font-weight: 800 !important;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #ff4f8b;
 }
 
 #navegacao-principal ul {
@@ -36,43 +49,80 @@ body {
     list-style: none;
 }
 
+#navegacao-principal a:hover {
+    color: #ffd23f;
+}
+
 #conteiner-principal {
-    max-width: 860px;
+    max-width: 900px;
     margin: 2rem auto;
     padding: 1.5rem 2rem;
-    background: #fff;
-    border-radius: 6px;
+    background: #1b1b2f;
+    border-radius: 10px;
+    box-shadow: 0 0 24px rgba(255, 79, 139, 0.15);
+}
+
+h1, h2 {
+    color: #ffd23f;
 }
 
 #conteiner-principal img {
     max-width: 100%;
+    border-radius: 8px;
+}
+
+.lista-posts {
+    padding: 0;
+    list-style: none;
 }
 
 .lista-posts li {
-    margin-bottom: 0.5rem;
+    padding: 0.8rem 1rem;
+    margin-bottom: 0.6rem;
+    background: #252542;
+    border-left: 4px solid #ff4f8b;
+    border-radius: 4px;
+}
+
+.lista-posts a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    margin-right: 0.6rem;
+}
+
+.lista-posts a:hover {
+    color: #ff4f8b;
 }
 
 .lista-posts small,
 .meta {
-    color: #666;
+    color: #9a9ab8;
 }
 
 .acoes {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     gap: 1rem;
     margin: 1rem 0;
 }
 
 .botao {
     display: inline-block;
-    padding: 0.4rem 0.9rem;
+    padding: 0.45rem 1rem;
     border: none;
-    border-radius: 4px;
-    background: #1f3a5f;
+    border-radius: 20px;
+    background: #ff4f8b;
     color: #fff;
+    font-weight: 600;
     text-decoration: none;
     cursor: pointer;
     font-size: 0.95rem;
+}
+
+.botao:hover {
+    background: #e03a74;
 }
 
 .botao.perigo {
@@ -85,15 +135,20 @@ form p {
 
 form label {
     display: block;
-    font-weight: bold;
+    font-weight: 600;
+    color: #ffd23f;
 }
 
 form input[type=text],
 form textarea,
 form select {
     width: 100%;
-    padding: 0.4rem;
+    padding: 0.5rem;
     font-family: inherit;
+    background: #252542;
+    color: #e8e8f0;
+    border: 1px solid #44446a;
+    border-radius: 4px;
 }
 
 form textarea {
@@ -101,16 +156,23 @@ form textarea {
 }
 
 .comentario {
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #33335a;
     padding: 0.6rem 0;
 }
 
 .categorias a {
-    margin-right: 0.6rem;
+    display: inline-block;
+    margin: 0 0.4rem 0.4rem 0;
+    padding: 0.15rem 0.7rem;
+    border-radius: 12px;
+    background: #2b1055;
+    color: #ffd23f;
+    font-size: 0.85rem;
+    text-decoration: none;
 }
 
 #rodape-principal {
     text-align: center;
-    color: #666;
+    color: #9a9ab8;
     padding: 1rem;
 }

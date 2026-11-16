@@ -5,16 +5,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}{% endblock title %} | Blog PMR3304</title>
+    <title>{% block title %}{% endblock title %} | Otaku News</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
 </head>
 
 <body>
     <header id="cabecalho-principal">
-        <a class="logo" href="{% url 'posts:index' %}">Blog PMR3304</a>
+        <a class="logo" href="{% url 'posts:index' %}">Otaku<span>News</span></a>
         <nav id="navegacao-principal">
             <ul>
-                <li><a href="{% url 'posts:index' %}">Posts</a></li>
+                <li><a href="{% url 'posts:index' %}">Notícias</a></li>
+                <li><a href="{% url 'posts:create' %}">Publicar</a></li>
                 <li><a href="{% url 'admin:index' %}">Admin</a></li>
             </ul>
         </nav>
@@ -24,7 +27,7 @@
         {% endblock content %}
     </main>
     <footer id="rodape-principal">
-        <p><small>PMR3304 - Sistemas de Informação - 2026</small></p>
+        <p><small>Otaku News - as últimas notícias do mundo dos animes e mangás | PMR3304 2026</small></p>
     </footer>
 </body>
 
