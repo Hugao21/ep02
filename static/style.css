@@ -203,6 +203,32 @@ form label {
     color: #0d2a5c;
 }
 
+#id_categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.3rem;
+}
+
+#id_categories label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.3rem 0.8rem;
+    border: 1px solid #b7c8e3;
+    border-radius: 16px;
+    background: #f5f8fd;
+    color: #0d47a1;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#id_categories label:has(input:checked) {
+    background: #1565c0;
+    border-color: #1565c0;
+    color: #fff;
+}
+
 form input[type=text],
 form input[type=url],
 form textarea,
