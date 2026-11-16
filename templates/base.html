@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %} | Blog PMR3304</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <header id="cabecalho-principal">
+        <a class="logo" href="{% url 'posts:index' %}">Blog PMR3304</a>
+        <nav id="navegacao-principal">
+            <ul>
+                <li><a href="{% url 'posts:index' %}">Posts</a></li>
+                <li><a href="{% url 'admin:index' %}">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="conteiner-principal">
+        {% block content %}
+        {% endblock content %}
+    </main>
+    <footer id="rodape-principal">
+        <p><small>PMR3304 - Sistemas de Informação - 2026</small></p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f5f7;
+    color: #222;
+    line-height: 1.5;
+}
+
+#cabecalho-principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #1f3a5f;
+}
+
+#cabecalho-principal a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+#navegacao-principal ul {
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#conteiner-principal {
+    max-width: 860px;
+    margin: 2rem auto;
+    padding: 1.5rem 2rem;
+    background: #fff;
+    border-radius: 6px;
+}
+
+#conteiner-principal img {
+    max-width: 100%;
+}
+
+.lista-posts li {
+    margin-bottom: 0.5rem;
+}
+
+.lista-posts small,
+.meta {
+    color: #666;
+}
+
+.acoes {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.botao {
+    display: inline-block;
+    padding: 0.4rem 0.9rem;
+    border: none;
+    border-radius: 4px;
+    background: #1f3a5f;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.botao.perigo {
+    background: #b3261e;
+}
+
+form p {
+    margin: 0.8rem 0;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+}
+
+form input[type=text],
+form textarea,
+form select {
+    width: 100%;
+    padding: 0.4rem;
+    font-family: inherit;
+}
+
+form textarea {
+    min-height: 12rem;
+}
+
+.comentario {
+    border-top: 1px solid #ddd;
+    padding: 0.6rem 0;
+}
+
+.categorias a {
+    margin-right: 0.6rem;
+}
+
+#rodape-principal {
+    text-align: center;
+    color: #666;
+    padding: 1rem;
+}

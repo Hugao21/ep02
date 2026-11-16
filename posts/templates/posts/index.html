@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Posts{% endblock title %}
+
+{% block content %}
+<h1>Posts</h1>
+{% if post_list %}
+<ul class="lista-posts">
+    {% for post in post_list %}
+    <li>
+        {{ post.title }}
+        <small>{{ post.pub_date|date:"d/m/Y H:i" }}</small>
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>Nenhum post encontrado.</p>
+{% endif %}
+{% endblock content %}
