@@ -49,3 +49,17 @@ class CommentForm(ModelForm):
             'author': 'Autor',
             'text': 'Comentário',
         }
+
+
+class CategoryForm(ModelForm):
+
+    class Meta:
+        model = Category
+        fields = [
+            'name',
+            'description',
+        ]
+        labels = {
+            'name': 'Nome',
+            'description': 'Descrição',
+        }

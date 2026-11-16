@@ -3,7 +3,7 @@ from django.shortcuts import get_object_or_404, render
 from django.urls import reverse, reverse_lazy
 from django.views import generic
 
-from .forms import CommentForm, PostForm
+from .forms import CategoryForm, CommentForm, PostForm
 from .models import Category, Post
 
 
@@ -72,3 +72,12 @@ class CategoryDetailView(generic.DetailView):
         context = super().get_context_data(**kwargs)
         context['post_list'] = self.object.posts.order_by('-pub_date')
         return context
+
+
+class CategoryCreateView(generic.CreateView):
+    model = Category
+    form_class = CategoryForm
+    template_name = 'posts/category_create.html'
+
+    def get_success_url(self):
+        return reverse('posts:category', args=(self.object.id, ))
